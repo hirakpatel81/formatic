@@ -1,0 +1,43 @@
+.form-control:focus,
+.form-select:focus {
+  box-shadow: 0 0 0 1px var(--bs-blue);
+  outline: none;
+}
+
+.formatic-form-control {
+  border-radius: var(--radius);
+  font-family: var(--font-family);
+  font-size: var(--text-base);
+  width: 100%;
+  transition: all 0.2s;
+}
+
+.formatic-form-control:focus {
+  border-color: var(--color-500);
+  box-shadow: 0 0 0 1px var(--color-400);
+  outline: none;
+}
+
+.formatic-form-control:disabled {
+  background-color: var(--bs-secondary-bg);
+  cursor: not-allowed;
+}
+
+.formatic-form-group {
+  margin-bottom: 1rem;
+}
+
+.formatic-form-control.is-invalid ~ .invalid-feedback {
+  display: block;
+}
+
+.formatic-form-text {
+  margin-top: 0.25rem;
+  font-size: 0.875em;
+}
+
+.formatic-form-select:focus {
+  border-color: var(--color-500);
+  box-shadow: 0 0 0 1px var(--color-400);
+  outline: none;
+}

@@ -1,0 +1,64 @@
+.btn {
+  padding: 0.5rem 1rem;
+
+  font-weight: 500;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.btn:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+.formatic-btn-primary {
+  border-radius: var(--radius);
+  background-color: var(--color-500);
+  color: white;
+  border-color: var(--color-500);
+}
+
+.formatic-btn-primary:hover {
+  background-color: var(--color-50);
+  border-color: var(--color-500);
+  color: var(--color-700);
+}
+
+.formatic-btn-primary:active {
+  background-color: var(--color-500) !important;
+  color: white;
+  border-color: var(--color-500) !important;
+}
+
+.formatic-btn-primary:disabled {
+  background-color: var(--color-200);
+  border-color: var(--color-200);
+  color: var(--color-400);
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.formatic-btn-outline-primary {
+  border-radius: var(--radius);
+  background-color: transparent;
+  color: var(--color-500);
+  border: 1px solid var(--color-500);
+}
+
+.formatic-btn-outline-primary:hover {
+  background-color: var(--color-50);
+  border-color: var(--color-500);
+  color: var(--color-700);
+}
+
+.formatic-btn-outline-primary:active {
+  background-color: var(--color-500) !important;
+  border-color: var(--color-500) !important;
+  color: white;
+}
+
+.formatic-btn-outline-primary:disabled {
+  border-color: var(--color-500) !important;
+  color: white;
+}
+.formatic-btn-outline-secondary {
+  border-radius: var(--radius);
+}

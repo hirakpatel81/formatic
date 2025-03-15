@@ -1,0 +1,18 @@
+@import "./base/theme.css";
+
+/* Import component styles */
+@import "./components/buttons.css";
+@import "./components/forms.css";
+
+.navbar {
+  color: white;
+  padding: 1rem;
+}
+
+.border-primary {
+  border-color: var(--color-400) !important;
+}
+
+.bg-primary {
+  background: var(--color-50) !important;
+}

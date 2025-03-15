@@ -1,0 +1,57 @@
+.custom-switch {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 24px;
+}
+
+.custom-switch-input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.custom-switch-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* Using Bootstrap's secondary color for initial state */
+    background-color: var(--bs-secondary);
+    border-radius: 24px;
+    transition: all 0.2s ease;
+}
+
+.custom-switch-button {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+
+}
+
+
+
+/* Checked state */
+.custom-switch-input:checked+.custom-switch-label {
+    /* Using our theme color for checked state */
+    background-color: var(--color-700);
+}
+
+.custom-switch-input:checked+.custom-switch-label .custom-switch-button {
+    transform: translateX(20px);
+}
+
+
+
+/* Disabled state */
+.custom-switch-input:disabled+.custom-switch-label {
+    opacity: 0.6;
+    cursor: not-allowed;
+}

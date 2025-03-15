@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 32">
+  <g id="logo-group">
+    <!-- Icon: slightly reduced size -->
+    <g id="icon">
+      <rect x="4" y="4" width="24" height="24" rx="6" fill="#8f3828" />
+      <path d="M9 12 H23 M9 16 H23 M9 20 H17"
+        stroke="white"
+        stroke-width="2"
+        stroke-linecap="round" />
+      <circle cx="21" cy="20" r="1.75" fill="white" />
+    </g>
+
+    <!-- Text: adjusted positioning and size -->
+    <text x="34" y="23" font-family="Inter, -apple-system, sans-serif" font-size="20"
+      font-weight="600" fill="#212529" letter-spacing="-0.01em">Formatic</text>
+  </g>
+</svg>

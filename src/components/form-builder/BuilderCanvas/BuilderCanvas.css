@@ -1,0 +1,211 @@
+:root {
+  --header-height: 75px;
+}
+
+.empty-container {
+  border: 2px dashed;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  min-height: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease-in-out;
+  background-color: white;
+}
+
+.empty-container.drag-over {
+  border-color: var(--color-500);
+  background-color: var(--color-50);
+}
+
+.form-container {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: white;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Individual field wrapper styling */
+.field-wrapper {
+  position: relative;
+  transition: all 0.2s ease-in-out;
+  padding: 0.5rem 1rem;
+}
+
+.field-wrapper:hover {
+  border: 1px solid var(--bs-secondary-border-subtle);
+}
+
+.field-wrapper.selected-field {
+  border: 1px solid var(--bs-secondary-border-subtle);
+}
+
+.form-field-group {
+  transition: all 0.2s ease-in-out;
+  width: 100%;
+}
+
+/* Action buttons container */
+.field-wrapper .field-actions {
+  display: none;
+}
+
+.field-wrapper:hover .field-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.field-wrapper:hover .form-field-group {
+  padding: 0 0.5rem;
+}
+
+/* Action button styling */
+.field-actions .btn {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  font-size: 0.875rem;
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  color: var(--bs-secondary);
+  border-color: transparent;
+}
+
+.field-actions .btn:hover {
+  background-color: var(--bs-gray-100);
+  color: var(--bs-secondary);
+}
+
+.field-actions .btn.btn-outline-danger {
+  color: var(--bs-danger);
+}
+
+.field-actions .btn.btn-outline-danger:hover {
+  background-color: var(--bs-danger-bg-subtle);
+  color: var(--bs-danger);
+  border-color: transparent;
+}
+
+.field-actions .btn.btn-outline-secondary:hover {
+  background-color: var(--bs-secondary-bg-subtle);
+  color: var(--bs-secondary);
+  border-color: transparent;
+}
+
+/* Drag handle for field reordering */
+.drag-handle {
+  display: none;
+  padding: 0.5rem;
+  cursor: move;
+  color: var(--color-400);
+}
+
+.field-wrapper:hover .drag-handle {
+  display: flex;
+  align-items: center;
+}
+.canvas-scrollable-area {
+  height: 100%;
+  overflow-y: auto;
+  flex: 1;
+}
+
+/* Property panel styling */
+.property-panel {
+  position: fixed;
+  top: var(--header-height);
+  right: 0;
+  width: 380px;
+  height: calc(100vh - var(--header-height));
+  background: white;
+  z-index: 1000;
+  overflow-y: auto;
+  border-left: 1px solid var(--bs-border-color);
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.05);
+}
+.property-panel.open {
+  right: 0;
+}
+
+.canvas-container {
+  transition: margin-right 0.3s ease-in-out;
+  margin-right: 0;
+}
+
+.canvas-container.with-panel {
+  margin-right: 380px;
+}
+
+/* Form control styling */
+.field-wrapper .form-control {
+  transition: border-color 0.2s ease-in-out;
+}
+
+/* Drop zone styling */
+.field-drop-zone {
+  position: relative;
+  min-height: 12px;
+  transition: all 0.3s ease;
+  margin: 4px 0;
+  border-radius: 4px;
+  opacity: 0.6;
+}
+
+.field-drop-zone.drag-over {
+  min-height: 40px;
+  background-color: rgba(var(--color-500-rgb), 0.1);
+  border: 2px dashed var(--color-500);
+  opacity: 1;
+}
+
+.drop-indicator {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.drop-line {
+  position: absolute;
+  left: 5%;
+  right: 5%;
+  height: 3px;
+  background-color: var(--color-500);
+}
+
+.drop-icon {
+  position: relative;
+  width: 28px;
+  height: 28px;
+  background-color: var(--color-500);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 14px;
+  z-index: 6;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.field-wrapper[data-field-type="button"] {
+  background-color: rgba(var(--color-500-rgb), 0.05);
+  border-left: 3px solid var(--color-500);
+}
+
+:root {
+  --color-500-rgb: 176, 70, 50;
+}
